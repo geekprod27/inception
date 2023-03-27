@@ -15,7 +15,4 @@ wp core install --allow-root \
 wp user create --allow-root "$WP_USER" "$WP_USER_MAIL" --user_pass="$WP_USER_PASS" --path='/var/www/wordpress'
 fi
 
-# chown -R root:root /var/www/
-# chmod -R 755 /var/www/
-
 exec php-fpm7.3 -F
