@@ -14,7 +14,6 @@ services:
     expose:
       - "3306"
   nginx:
-    image: nginx
     container_name: nginx
     networks:
       - inception
@@ -52,13 +51,13 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: /home/nfelsemb/wordpress
+      device: /home/nfelsemb/data/wordpress
   mariadb:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/nfelsemb/mariadb
+      device: /home/nfelsemb/data/mariadb
 
 networks:
   inception:

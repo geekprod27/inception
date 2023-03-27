@@ -1,5 +1,4 @@
-
-
+chown -R root:root /var/www/wordpress
 if [ ! -f /var/www/wordpress/wp-config.php ]; then
 wp config create --allow-root \
 --dbname=$SQL_DATABASE \
